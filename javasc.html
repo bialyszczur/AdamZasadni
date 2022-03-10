@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="liczba" />
+    <button>Wyświetl miesiąc</button>
+    <div class="wynik"></div>    
+
+    <script>
+        //pobieramy elementy stgrony (input, button, div)
+        const poleInput = document.querySelector('input[name="liczba"]' );
+        const btn = document.querySelector('button' );
+        const divW = document.querySelector('div.wynik' );
+
+        //obsługa klikania w przycisk
+        btn.addEventListener('click' , function () {
+            //pobieramy wartość pola input
+            const wartoscPolaInput = poleInput.value * 1;
+
+            switch (wartoscPolaInput){
+                case 1:
+                    divW.textContent = 'Twój wybór to styczeń';
+                    break;
+                case 2:
+                    divW.textContent = 'Twój wybór to luty';
+                    break;
+                case 3:
+                    divW.textContent = 'Twój wybór to marzec';
+                    break;
+                case 4:
+                    divW.textContent = 'Twój wybór to kwiecień';
+                    break;
+                case 5:
+                    divW.textContent = 'Twój wybór to maj';
+                    break;
+                default: 
+                    divW.textContent = 'Nie znam takiego miesiąca' ;
+
+            }
+        } )
+    </script>
+</body>
+</html>
