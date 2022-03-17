@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="number" name="liczba1" />
+     <input type="number" name="liczba2" />
+     <button>Oblicz NWD</button>
+     <div class="wynik">Tu będzie wynik obliczeń</div>
+
+     <script>
+         //pobieramy elementy htmla do JSA
+         const divW = document.querySelector('div.wynik')
+         const btn = document.querySelector('button')
+
+         //przypisujemy do przycisku btn zdarzenie click (klikanie mysza)
+         btn.addEventListener('click', ()=>{
+             //ten kod sie wykona w momencie klikniecia button na stronie
+             //pobranie wartości pól input 
+             let l1 = document.querySelector('input[name="liczba1"] ' ) .value * 1;
+             let l2 = document.querySelector('input[name="liczba2"] ' ) .value * 1;
+
+             //obliczamy NWD wykorzystując algorytm Euklidesa
+             while(l1 != l2){
+                 if(l1 > l2){
+                     l1 = l1 - l2;
+                 }
+                 else {
+                     l2 = l2 - l1;
+                 }
+             }
+
+             //wyświetlamy w divie informacje o NWD
+             divW.textContent = 'NWD wynosi: ' + l1;
+         });
+     </script>
+</body>
+</html>
