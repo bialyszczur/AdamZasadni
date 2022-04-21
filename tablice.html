@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const liczby = [1, 2];
+        const wyrazy = ['Ala', 'Ola'];
+        console.log(liczby[0]);
+        console.log(wyrazy[1]);
+
+        liczby[2] = 'Marek';
+        console.log(liczby);
+
+        //const color = ['red', 'blue', 'orange', 'yellow', 'green'];
+        //console.log(colors);
+
+        //PUSH - dodaje element na końcu tablicy 
+        //colors.push('black');
+        //console.log(colors);
+
+        //UNSHIFT - dodaje element na początku tablicy
+        //colors.unshift('white');
+        //console.log(colors);
+        
+        //POP - usuwa ostatni elemnt tablicy (Usunięcie indexu i wartości nie tylko elementu)) 
+        //colors.pop();
+        //console.log(colors);
+
+        //SHIFT - usuwa pierwszy element z tablicy
+            
+        //CONCAT - łączenie tablic
+        //const even = [2, 4, 6, 8];
+        //const odd = [1, 3, 5, 7, 9];
+        //const number = even.concat(odd);
+        //console.log(number);
+
+        //METODA SORT
+        //metoda destrukcyjna
+        //nie działa prawidłowo na liczby 
+        //animals.sort();
+        //console.log(animals);
+
+        //METODA INDEXOF
+        //szuka takiego elementu w tablicy, jesli znajdzie zwraca index tego elementu, jeśli nie zwraca -1;
+        //szuka tylko do pierwszego elementu
+        //console.log = (animals.indexOf('canary'));
+
+        //METODA JOIN
+        //Tworzy stringa z elementów, domyślnie oddzielonych przecinkiem. Możemy to jednak zmienić
+        //console.log(animals.join()); //string oddzielony przecinkiem
+        //console.log(animals.join(' '));
+
+        //METODA REVERSE 
+        //metoda destrukcyjna
+        //pdwraca kolejność
+
+        //items.reverse();
+        //["a", 3 , "z", "koniec"].reverse();
+
+        /*
+        const items = ['zad', 'bza', 'wus', 'xad', 'coe', 'mer', 'tve'];
+        console.log(items);
+        */ 
+
+        //METODA SLICE - zwraca nową tablice, która składa się z części tablicy na której jest wykonywana Jeśli damy tylko jeden argument 
+        //to będzie zwracała od tego elementu (od tego indexu) do końca
+        //console.log(items.slice(3,5));
+        //console.log(items);
+
+        //METODA SPLICE
+        //Przykład metody destrukcyjnej (destructive method, mutating method - zmieniaja tablicę na której są wywoływane)
+        //Ta metoda zmienia tablice (modyfikuje) na której jest wykonywana
+        const animals = ['dog', 'cat', 'canary', 'mouse'];
+        console.log(animals);
+        
+        //METODA SPLICE UMOŻLIWIA NAM TEŻ ZAMIENIENIE ELEMENTÓW
+        //animals.splice(2, 1, 'hamster');
+        //console.log(animals);
+        //animals.splice(0 , 2, 'fishes');
+        //console.log(animals);
+        //animals.splice(0); wyzeruje cała tablice 
+        //console.log(animals);
+
+        //METODA SPLIT, KTÓRĄ MOŻNA WYKONAĆ NA STRING, TWORZY TABLICE
+        //const letters = 'Marek Adam Justyna Teresa'.split(' ');
+        console.log(letters);
+        //"Marek Adam Justyna Teresa".split(' ');
+        //"Gdańsk,Elbląg,Gdynia,Sopot,Władysłąwowo".split(' ');
+
+
+
+
+
+      
+      
+
+    </script>
+</body>
+</html>
