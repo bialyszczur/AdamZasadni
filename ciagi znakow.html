@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+
+        METODA charAt
+       ciąg.charAt(indeks) Zwraca znak ciągu znajudjący się pod indeksem indeks 
+       METODA concat
+       łączy łańcuchy znakowe
+
+       METODA indexOf ciąg.indexOf ///(wartosć [, indeks])///
+       Zwraca indeks wystąpienia ciągu wartość w ciągu ciąg Jeżeli podany zostanie opcjonalny drugi argument
+       przeszukiwanie rozpocznie się od znaku znajdującego się pod indeksem 
+
+       toLowerCase ciąg.toLowerCase() Zwraca ciąg w którym wszystkie znaki ciągu ciąg zostąły zamienione na małe litery
+
+       toUpperCase ciąg.toUpperCase() Zwraca ciąg w którym wszystkie znaki ciągu ciąg zostąły zamienione na wielkie litery
+
+    -->
+    <!-- <script>
+    /*    const zdanie="Ala ma kota";
+
+        ///sprawdzamy czy ciąg "kot" istnieje
+        if (zdanie.indexOf("kot") > -1 ) {
+            console.log("znalazłem podany ciąg");
+        } else {
+            console.log("Podany ciąg nie znajduje się w zdaniu");
+        }
+
+        //pobieranie kawałka tekstu
+        zdanie.substr(0 ,3); //Ala
+        zdanie.substr(7 ,2); //ko
+
+        //przycinanie tekstu
+        zdanie.slice(2); //a ma kota
+        zdanie.slice(7, 2); //?
+        zdanie.slice(2, 7) //a ma k
+
+        //zamiana tekstu
+        const zdanieZmiana = zdanie.replace("Ala", "Kasia");
+        console.log(zdanieZmiana); //Kasia ma kota
+    </script> -->
+
+    <form action="" method="POST">
+        <input type="text" name="imie" placeholder="podaj imię" />
+        <input type="submit" value="sprawdz" />
+    </form>
+
+    <div></div>
+
+    <script>
+        //pobieramy formularz oraz pole formularza
+        const formularz = document.querySelector('form');
+        const poleImie = document.querySelector('input[name="imie"]');
+
+        const div = document.querySelector('div');
+
+        //tworzymy funckje sprawdzającą czy imie jest męskie czy żenskie
+        const sprawdzImie = function(imie){
+          const ostatniaLitera = imie.charAt(imie.length - 1);
+          if(ostatniaLitera == 'a'){
+              return 'Podane imię jest żeńskie';
+          } else {
+              return 'Podane imię jest męskie';
+          }
+        }
+
+        //obsługa formularza
+        formularz.addEventListener('submit' , function(e){
+            //zatrzymanie domyślnej akci
+            e.preventDefault();
+            //pobieramy wartosc pola imie
+            const imie = poleImie.value;
+
+            //sprawdzamy imie
+            div.textContent = sprawdzImie(imie);
+
+        });
+
+    </script>
+</body>
+</html>
