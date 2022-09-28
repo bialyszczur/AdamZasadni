@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="number" name="liczba" />
+        <input type="submit" name="pokaż" />
+    </form>
+    <div></div>
+
+    <script>
+        //pobieramy formularz
+        const formularz = document.querySelector('form');
+        //pobieramy pole input o nazwie liczba
+        const poleLiczba = document.querySelector('input[name="liczba"]');
+        //pobieramy diva
+        const div = document.querySelector('div');
+
+        //obsługujemy zdarzenie submit na formularzu
+        formularz.addEventListener('submit', (e)=>{
+            e.preventDefault(); //zatrzymanie domyslnej akcji
+            //pobieramy wartość pola licbza
+            const wartoscPolaLiczba = poleLiczba.value;
+            //do diva wrzucamy wpisana liczbe
+            div.textContent = wartoscPolaLiczba;
+        });
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wybierz ulubione przedmioty: </h1>
+    <form action="" method="post">
+        <input type="checkbox" name="przedmioty" value="matematyka" />matematyka
+        <input type="checkbox" name="przedmioty" value="fizyka" />fizyka
+        <input type="checkbox" name="przedmioty" value="chemia" />chemia
+        <input type="checkbox" name="przedmioty" value="programowanie" />programowanie
+        <input type="checkbox" name="przedmioty" value="www" />www
+        <input type="submit" value="Pokaż" />
+        <div></div>
+
+        <script>
+            //pobieramy formularz
+            const formularz = document.querySelector('form');
+            //pobieramy pola checkbox
+            const przedmioty = document.querySelectorAll('input[name="przedmioty"]');
+            //pobieramy diva
+            const div = document.querySelector('div');
+
+            //obsluga zdarzenia na formularzu
+            formularz.addEventListener('submit', function(e){
+                e.preventDefault();
+                //sprawdzamy, ktore pole jest zaznaczone i wyswietlamy je na stronie
+                przedmioty.forEach((przedmiot) => {
+                    if(przedmiot.checked) {
+                        div.textContent += przedmiot.value + ' ';
+                    }
+                });
+            });
+        </script>
+    </form>
+    
+</body>
+</html>
