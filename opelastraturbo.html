@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="number" name="liczba" />
+        <input type="submit" name="pokaż" />
+    </form>
+    <div></div>
+
+    <script>
+        //pobieramy formularz
+        const formularz = document.querySelector('form');
+        //pobieramy pole input o nazwie liczba
+        const poleLiczba = document.querySelector('input[name="liczba"]');
+        //pobieramy diva
+        const div = document.querySelector('div');
+
+        //obsługujemy zdarzenie submit na formularzu
+        formularz.addEventListener('submit', (e)=>{
+            e.preventDefault(); //zatrzymanie domyslnej akcji
+            //pobieramy wartość pola licbza
+            const wartoscPolaLiczba = poleLiczba.value;
+            //do diva wrzucamy wpisana liczbe
+            div.textContent = wartoscPolaLiczba;
+        });
+    </script>
+</body>
+</html>
